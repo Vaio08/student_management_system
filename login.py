@@ -1,7 +1,7 @@
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 from PIL import ImageTk
-
 
 #Login function
 def login():
@@ -10,7 +10,7 @@ def login():
     elif userNameEntry.get() == 'admin' and passwordEntry.get() == '1234':
         messagebox.showinfo('Success', 'Login Successful')
         window.destroy()
-        import sms
+        import src.sms as sms
     else:
         messagebox.showerror('Error', 'Invalid username or password')
 
@@ -62,7 +62,7 @@ loginButton = Button(loginFrame, text='Login', font=('Arial', 16), bg='royal blu
 loginButton.grid(row=3, column=0, columnspan=2, pady=20)
 
 
-s = 'STUDENT MANAGEMENT SYSTEM' #
+s = 'STUDENT MANAGEMENT SYSTEM'
 sliderLabel = Label(window, text=s, font=('Arial', 30, 'bold'), bg='#fff4ec', fg='black', width=30)
 sliderLabel.place(x=280, y=10)
 slider()
